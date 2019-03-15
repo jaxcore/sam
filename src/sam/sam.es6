@@ -73,7 +73,7 @@ export function SamWave (input, options) {
  *
  * @return {Uint8Array|Boolean}
  */
-function SamProcess (input, options) {
+export function SamProcess (input, options) {
   const parsed = Parser(input);
   if (false === parsed) {
     return false;

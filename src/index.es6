@@ -1,5 +1,5 @@
 import TextToPhonemes from './reciter/reciter.es6';
-import {SamSpeak} from './sam/sam.es6';
+import {SamSpeak, SamProcess} from './sam/sam.es6';
 
 function SamJs (options) {
   const opts = options || {};
@@ -36,5 +36,7 @@ function SamJs (options) {
     return SamSpeak(input, opts);
   };
 }
+
+export {SamSpeak, SamProcess, TextToPhonemes};
 
 export default SamJs;
