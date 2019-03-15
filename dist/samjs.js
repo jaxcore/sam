@@ -3,17 +3,17 @@
  *
  * A Javascript port of "SAM Software Automatic Mouth".
  *
- * (c) 2017-2018 Christian Schiffler
+ * (c) 2017-2019 Christian Schiffler
  *
  * @link(https://github.com/discordier/sam)
  *
  * @author 2017 Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.SamJs = factory());
-}(this, (function () { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.SamJs = global.SamJs || {})));
+}(this, (function (exports) { 'use strict';
 
 /**
  * Char flags.
@@ -3744,6 +3744,11 @@ function SamJs (options) {
   };
 }
 
-return SamJs;
+exports.SamSpeak = SamSpeak;
+exports.SamProcess = SamProcess;
+exports.TextToPhonemes = TextToPhonemes;
+exports['default'] = SamJs;
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

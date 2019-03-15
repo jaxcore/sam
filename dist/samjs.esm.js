@@ -3,7 +3,7 @@
  *
  * A Javascript port of "SAM Software Automatic Mouth".
  *
- * (c) 2017-2018 Christian Schiffler
+ * (c) 2017-2019 Christian Schiffler
  *
  * @link(https://github.com/discordier/sam)
  *
@@ -3738,4 +3738,4 @@ function SamJs (options) {
   };
 }
 
-export default SamJs;
+export { SamSpeak, SamProcess, TextToPhonemes };export default SamJs;
