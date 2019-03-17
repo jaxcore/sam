@@ -1,4 +1,0 @@
-[submodule "c-src"]
-	path = c-src
-	url = ./.git
-	branch = c-src
